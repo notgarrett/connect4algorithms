@@ -74,6 +74,7 @@ impl TryFrom<&str> for ArrayBoard {
     }
 }
 
+#[allow(unused)]
 impl ArrayBoard {
     pub fn is_winning_move(&self, col: usize) -> bool {
         self.is_winning_vertical(col)
@@ -135,7 +136,7 @@ impl ArrayBoard {
     }
 
     pub fn game(&self) -> String {
-        self.game
+        self.game.to_owned()
     }
 
     pub fn player_turn(&self) -> CurrentTurn {
